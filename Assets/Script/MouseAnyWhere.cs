@@ -27,11 +27,11 @@ public class MouseAnyWhere : MonoBehaviour
 
     void cubeMove(){
         mousePosition = Input.mousePosition;
-        mousePosition.z =Camera.main.nearClipPlane + 2;
+        mousePosition.z = Camera.main.nearClipPlane + 7; 
 
         worldPosition =Camera.main.ScreenToWorldPoint(mousePosition);
 
-        transform.position = worldPosition;
+        transform.position = new Vector3(worldPosition.x, 1, worldPosition.z);
     }
 
     // Update is called once per frame
